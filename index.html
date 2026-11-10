@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Little Place for You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cairo:wght@400;600&family=Playpen+Sans+Arabic:wght@400;500&family=Fraunces:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<div id="sky" aria-hidden="true"></div><div id="hearts" aria-hidden="true"></div>
+
+<section id="welcome" class="screen">
+  <div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div>
+  <div class="inner">
+    <div class="heart-sm">♥</div>
+    <h1 class="hand">Hey, My Favorite Girl.</h1>
+    <p class="sub">A Little Place for You — a little corner of the world made just for you.</p>
+    <p>I made this little place just for you. Somewhere you can come whenever you need a little peace, a little smile, or just a reminder of how special you are.</p>
+    <button id="enter" class="btn">Enter My Little World</button>
+  </div>
+</section>
+
+<main id="main" hidden>
+  <section id="letter"><h2 class="hand">A Letter From My Heart</h2>
+    <p class="hint">Tap the envelope</p>
+    <div id="envelope"><div class="env-back"></div><div class="paper" dir="rtl"><div id="letterText"></div><p id="letterEnd" dir="ltr"></p><p id="letterSign" dir="ltr" class="hand"></p></div><div class="env-front"></div><div class="flap"></div></div>
+  </section>
+
+  <section id="box"><h2 class="hand">A Little Something to Make You Smile</h2>
+    <button id="giftBox" class="gift" aria-label="Open the box"><span class="lid"></span><span class="body"></span></button>
+    <p id="boxMsg" class="msg" dir="auto"></p><p id="boxNote" class="hint"></p>
+  </section>
+
+  <section id="remember"><h2 class="hand">Things I Want You to Remember</h2><div id="cards" class="grid"></div></section>
+
+  <section id="music"><h2 class="hand">Songs for Your Heart</h2>
+    <div class="player"><div id="cover" class="cover">♪</div>
+      <div class="pinfo"><b id="sTitle">No song yet</b><span id="sArtist">Add MP3s in config.js</span>
+        <div class="viz" id="viz"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="ctrl"><button id="prev" aria-label="Previous">⏮</button><button id="play" aria-label="Play">▶</button><button id="next" aria-label="Next">⏭</button>
+        <input id="vol" type="range" min="0" max="1" step="0.05" value="0.6" aria-label="Volume"></div></div></div>
+    <audio id="audio" preload="none"></audio>
+  </section>
+
+  <section id="note"><h2 class="hand">A Message From Me</h2><div id="noteText" class="note" dir="rtl"></div></section>
+  <section id="talk"><h2 class="hand">A Video Just for You</h2><video id="v1" controls preload="metadata" playsinline></video><p class="hint" id="v1n"></p></section>
+  <section id="memories"><h2 class="hand">Some Moments I Never Want to Forget</h2><video id="v2" controls preload="metadata" playsinline></video><p class="hint" id="v2n"></p></section>
+
+  <section id="hug"><h2 class="hand">If You Need a Hug</h2>
+    <p class="big">If I were next to you right now, I'd give you the longest hug.</p>
+    <button id="hugBtn" class="btn">Send Me a Hug</button>
+    <div id="hugOut" class="hugout"><div class="bigheart">♥</div><p></p></div>
+  </section>
+
+  <section id="garden"><h2 class="hand">A Little Garden</h2><p class="hint">Tap a flower</p>
+    <div id="flowers" class="flowers"></div><p id="flowerMsg" class="msg" dir="auto"></p></section>
+
+  <section id="final"><div class="moon"></div>
+    <h2 class="hand">One Last Thing...</h2><div id="finalText" class="final-text"></div>
+    <p id="sign" class="hand sign"></p><p id="sign2" class="hand sign"></p></section>
+</main>
+
+<nav id="tabs" hidden></nav>
+<script src="config.js"></script><script src="script.js"></script>
+</body></html>
